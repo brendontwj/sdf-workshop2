@@ -32,17 +32,17 @@ public class BankAccount {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    // public void setName(String name) {
+    //     this.name = name;
+    // }
 
     public String getAcctID() {
         return acctID;
     }
 
-    public void setAcctID(String acctID) {
-        this.acctID = acctID;
-    }
+    // public void setAcctID(String acctID) {
+    //     this.acctID = acctID;
+    // }
 
     public float getBalance() {
         return balance;
