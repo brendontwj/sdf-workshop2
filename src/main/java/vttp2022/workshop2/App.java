@@ -1,6 +1,5 @@
 package vttp2022.workshop2;
 
-import java.util.*;
 
 /**
  * Hello world!
@@ -19,7 +18,7 @@ public class App
         
         FixedDepositAccount fdAcc = new FixedDepositAccount("My FD Acc", 10000);
         System.out.println("Fixed Deposit Acc Balance > " + fdAcc.getBalance());
-        
+
     }
 
     
