@@ -1,7 +1,7 @@
 package vttp2022.workshop2;
 
 import java.util.*;
-import java.time.*;
+import java.time.LocalDateTime;
 
 public class BankAccount {
     // Bank Account
@@ -19,6 +19,7 @@ public class BankAccount {
     // Constructor with bank account name
     public BankAccount(String name) {
         this.name = name;
+        this.balance = 0;
     }
     // Second constructor with bank account name and the initial balance
     public BankAccount(String name, float initialBal) {
@@ -72,7 +73,11 @@ public class BankAccount {
         try {
             withdrawalAmountF = Float.parseFloat(withdrawalAmount);
             if (withdrawalAmountF.floatValue() <= 0) {
-                throw new IllegalArgumentException("Withdrawal amount cannot be negative or zero. ");
+                throw new IllegalArgumentException("Withdrawal amount cannot be negative or zero.");
+            }
+
+            if (withdrawalAmountF.floatValue() > this.balance) {
+                throw new IllegalArgumentException("Cannot withdraw more than currently owned.");
             }
 
             if (this.isClosed) {
