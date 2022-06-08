@@ -5,9 +5,9 @@ import java.time.LocalDateTime;
 
 public class BankAccount {
     // Bank Account
-    private String name = "";
+    private final String name = "";
     // generated account id from the UUID classs
-    private String acctID = UUID.randomUUID().toString().substring(0,8);
+    private final String acctID = UUID.randomUUID().toString().substring(0,8);
     // holds the bank acc balance
     private float balance = 0f;
     // list of transaction history on the bank account object
