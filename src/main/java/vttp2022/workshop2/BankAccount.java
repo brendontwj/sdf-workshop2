@@ -99,7 +99,7 @@ public class BankAccount {
             System.err.print(e);
             throw new IllegalArgumentException("Invalid deposit amount. ");
         }
-        return 0f;
+        return this.balance;
     }
 
     protected void deposit(String depositAmount) {
