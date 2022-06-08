@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 
 public class BankAccount {
     // Bank Account
-    private final String name = "";
+    private final String name;
     // generated account id from the UUID classs
     private final String acctID = UUID.randomUUID().toString().substring(0,8);
     // holds the bank acc balance
